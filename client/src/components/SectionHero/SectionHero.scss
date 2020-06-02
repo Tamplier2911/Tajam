@@ -1,0 +1,131 @@
+/*
+
+.sectionHero {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: 1fr minmax(0rem, 117rem) 1fr;
+  align-content: center;
+  justify-items: center;
+  min-height: 70vh;
+  background-image: linear-gradient(
+      to bottom right,
+      var(--cl-bgGd),
+      var(--cl-primaryGd)
+    ),
+    url("../../assets//jpg//hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  &__content {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-row-gap: 8rem;
+    color: var(--cl-white);
+    max-width: 70rem;
+    text-align: center;
+
+    @media only screen and (max-width: 768px) {
+      grid-row-gap: 6rem;
+      padding: 0 2rem;
+    }
+
+    @media only screen and (max-width: 375px) {
+      grid-row-gap: 4rem;
+    }
+  }
+
+  &__scribe {
+    display: grid;
+    &--header {
+      display: grid;
+      grid-row-gap: 2rem;
+      font-size: 3.2rem;
+      font-weight: 300;
+
+      &::after {
+        display: inline-block;
+        justify-self: center;
+        content: "";
+        background-color: var(--cl-tertiary);
+        height: 0.2rem;
+        width: 10rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &--text {
+      color: var(--cl-fontW);
+      font-size: 1.6rem;
+    }
+  }
+
+  &__cta {
+  }
+
+  &__circles {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    justify-content: center;
+    grid-column-gap: 0.8rem;
+
+    &--1 {
+      cursor: pointer;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: var(--cl-tertiary);
+
+      transition: 0.3s background-color;
+      &:hover {
+        background-color: var(--cl-secondary);
+      }
+    }
+
+    &--2 {
+      cursor: pointer;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      border: 0.1rem solid var(--cl-fontW);
+
+      transition: 0.3s background-color;
+      &:hover {
+        background-color: var(--cl-secondary);
+        border: none;
+      }
+    }
+
+    &--3 {
+      cursor: pointer;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      border: 0.1rem solid var(--cl-fontW);
+
+      transition: 0.3s background-color;
+      &:hover {
+        background-color: var(--cl-secondary);
+        border: none;
+      }
+    }
+
+    &--4 {
+      cursor: pointer;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      border: 0.1rem solid var(--cl-fontW);
+
+      transition: 0.3s background-color;
+      &:hover {
+        background-color: var(--cl-secondary);
+        border: none;
+      }
+    }
+  }
+}
+
+*/
