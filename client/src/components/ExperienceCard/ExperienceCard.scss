@@ -1,0 +1,35 @@
+/*
+
+.card {
+  display: grid;
+  grid-row-gap: 1.2rem;
+  padding: 3rem;
+  text-align: center;
+
+  @media only screen and (max-width: 582px) {
+    padding: 1rem;
+  }
+
+  &__svgwrap {
+    display: grid;
+    justify-items: center;
+    padding: 1rem 0rem;
+
+    &--svg {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &--text {
+    font-size: 1.5rem;
+    color: var(--cl-fontB);
+  }
+}
+
+*/

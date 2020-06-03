@@ -3,17 +3,15 @@ import React, { createContext, useState } from "react";
 const Context = createContext({});
 
 export const GlobalContext = ({ children }) => {
-  const [appState, setAppState] = useState({ modal: { modalHidden: true } });
-  const { modal } = appState;
+  const [appState, setAppState] = useState({ menu: { menuHidden: true } });
+  const { menu } = appState;
 
-  const toggleModal = () => {
-    setAppState({ ...appState, modal: { modalHidden: !modal.modalHidden } });
+  const toggleMenu = () => {
+    setAppState({ ...appState, menu: { menuHidden: !menu.menuHidden } });
   };
 
   return (
-    <Context.Provider value={{ modal, toggleModal }}>
-      {children}
-    </Context.Provider>
+    <Context.Provider value={{ menu, toggleMenu }}>{children}</Context.Provider>
   );
 };
 

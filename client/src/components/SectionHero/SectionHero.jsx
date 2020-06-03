@@ -23,7 +23,7 @@ import { landingPageConstants } from "./SectionHero.constants";
 const SectionHero = () => {
   const { header, message, button } = landingPageConstants;
   return (
-    <SectionHeroContainer>
+    <SectionHeroContainer id="hero">
       <SectionHeroContent>
         <SectionHeroMessage>
           <SectionHeroHeader>{header}</SectionHeroHeader>

@@ -3,6 +3,9 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 // components
+import Header from "./components/Header/Header";
+import Menu from "./components/Menu/Menu";
+import Footer from "./components/Footer/Footer";
 
 // pages
 import LandingPage from "./pages/LandingPage/LandingPage";
@@ -17,31 +20,12 @@ function App() {
   return (
     <Container>
       {/* <GlobalStyles /> */}
-      <header
-        style={{
-          gridColumn: "full-start / full-end",
-          backgroundColor: "transparent",
-          height: "6rem",
-          position: "fixed",
-          color: "white",
-          boxShadow: "0 0.2rem 0.4rem white",
-          width: "100%",
-        }}
-      >
-        header
-      </header>
+      <Header />
+      <Menu />
       <Switch>
         <Route exact path="/" component={LandingPage} />
       </Switch>
-      <footer
-        style={{
-          gridColumn: "full-start / full-end",
-          backgroundColor: "orangered",
-          height: "6rem",
-        }}
-      >
-        footer
-      </footer>
+      <Footer />
     </Container>
   );
 }

@@ -10,9 +10,10 @@
   // COLOR PALETTE
   --cl-primary: #312360;
   --cl-secondary: #46a3cc;
-  --cl-tertiary: #51c3c1;
+  --cl-tertiary: #01dfd0;
   --cl-font: #393939;
   --cl-fontW: #b8b8b8;
+  --cl-fontB: #747474;
   --cl-white: #ffffff;
   --cl-black: #000;
   --cl-bg: #13102d;
@@ -110,4 +111,12 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   font-size: 16px !important;
+}
+
+#root {
+  // position: relative;
+}
+
+#menu {
+  position: relative;
 }

@@ -1,0 +1,24 @@
+/*
+
+.linkwrap {
+  display: inline-block;
+}
+
+.link {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--cl-white);
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+  }
+
+  &:hover,
+  &:active {
+    color: var(--cl-tertiary);
+  }
+}
+
+*/

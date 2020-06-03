@@ -41,7 +41,7 @@ export const SectionHeroContainer = styled.section`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 6rem;
+  padding-top: 8rem;
   padding-bottom: 6rem;
 `;
 

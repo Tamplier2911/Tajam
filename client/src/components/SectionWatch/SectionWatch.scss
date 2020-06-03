@@ -1,0 +1,58 @@
+/*
+
+.watch {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: 1fr minmax(0rem, 117rem) 1fr;
+  padding: 20rem 0rem;
+
+  background-image: linear-gradient(
+      to bottom right,
+      var(--cl-primaryGd),
+      var(--cl-bgGd)
+    ),
+    url("../../assets/jpg/city.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__cta {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 1rem;
+    grid-column: 2 / 3;
+    padding: 0rem 2rem;
+
+    &--text {
+      color: var(--cl-white);
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &--btn {
+    }
+
+    &--svg {
+      cursor: pointer;
+      width: 14rem;
+      height: 14rem;
+      fill: var(--cl-fontW);
+
+      @media only screen and (max-width: 425px) {
+        width: 8rem;
+        height: 8rem;
+      }
+
+      transition: fill 0.3s;
+      @media (hover: hover) {
+        &:hover {
+          fill: var(--cl-tertiary);
+        }
+      }
+    }
+  }
+}
+
+*/
