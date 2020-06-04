@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   @supports (display: grid) {
     display: grid;
     grid-template-rows: 1fr;

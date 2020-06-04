@@ -1,2 +1,105 @@
+/*
+
 .team {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: 1fr minmax(0rem, 117rem) 1fr;
+  padding: 7rem 0rem;
+
+  background-image: linear-gradient(
+      to bottom right,
+      var(--cl-primaryGd),
+      var(--cl-bgGd)
+    ),
+    url("../../assets/jpg/team.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-row-gap: 8rem;
+    padding: 0rem 2rem;
+
+    color: var(--cl-white);
+  }
+
+  &__top {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    grid-row-gap: 1rem;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      background-color: var(--cl-fontW);
+      height: 0.2rem;
+      width: 6rem;
+    }
+
+    & h2 {
+      font-weight: 400;
+    }
+
+    &--text {
+      color: var(--cl-fontA);
+    }
+  }
+
+  &__mid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: min-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+
+    &--fig {
+      display: grid;
+      border: 0.1rem solid var(--cl-fontB);
+    }
+
+    &--imgwrap {
+      //   width: 20rem;
+      height: 35rem;
+    }
+
+    &--img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--info {
+      display: grid;
+      justify-items: center;
+      padding: 2rem 0rem;
+    }
+
+    &--name {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    &--pos {
+      font-size: 1.5rem;
+      color: var(--cl-fontW);
+    }
+  }
+
+  &__bot {
+    display: grid;
+    grid-row-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+
+    &--text {
+    }
+    &--cta {
+    }
+  }
 }
+
+*/

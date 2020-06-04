@@ -13,7 +13,7 @@ export const HeaderContainer = styled(Headroom)`
   grid-column: full-start / full-end;
   height: 8rem;
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   color: var(--cl-white);
   width: 100%;
 

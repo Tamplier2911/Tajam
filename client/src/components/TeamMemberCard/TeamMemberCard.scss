@@ -1,0 +1,34 @@
+/*
+
+.teamfig {
+  display: grid;
+  border: 0.1rem solid var(--cl-fontB);
+
+  &__imgwrap {
+    //   width: 20rem;
+    height: 35rem;
+    &--img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: grid;
+    justify-items: center;
+    padding: 2rem 0rem;
+    &--name {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    &--pos {
+      font-size: 1.5rem;
+      color: var(--cl-fontW);
+    }
+  }
+}
+
+*/

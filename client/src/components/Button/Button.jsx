@@ -4,9 +4,12 @@ import React from "react";
 // sc
 import { ButtonWrapper } from "./Button.styles";
 
-const Button = ({ title, action }) => {
+const Button = ({ title, action, type }) => {
   return (
-    <ButtonWrapper onClick={() => (action ? action() : () => {})}>
+    <ButtonWrapper
+      onClick={() => (action ? action() : () => {})}
+      type={type ? type : "button"}
+    >
       {title}
     </ButtonWrapper>
   );

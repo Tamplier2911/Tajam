@@ -42,7 +42,9 @@ const cosumizeBorers = ({ index }) => {
     `;
   } else if (index === 4) {
     return `
+    @media only screen and (max-width: 947px){
       border-right: solid 0.1rem var(--cl-fontW);
+    }
       @media only screen and (max-width: 582px){
         border none;
       }

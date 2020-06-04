@@ -20,23 +20,17 @@ export const headerConstants = {
     {
       id: "teamslink",
       title: "teams",
-      action: (e) => {
-        e.preventDefault();
-      },
+      action: jumper("#team"),
     },
     {
       id: "workslink",
       title: "works",
-      action: (e) => {
-        e.preventDefault();
-      },
+      action: jumper("#works"),
     },
     {
       id: "peoplelink",
       title: "people say",
-      action: (e) => {
-        e.preventDefault();
-      },
+      action: jumper("#testimonials"),
     },
     {
       id: "contactslink",

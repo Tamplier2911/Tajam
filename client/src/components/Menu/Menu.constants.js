@@ -20,23 +20,17 @@ export const menuConstants = {
     {
       id: "teamsmenulink",
       title: "teams",
-      action: (e) => {
-        e.preventDefault();
-      },
+      action: jumper("#team"),
     },
     {
       id: "worksmenulink",
       title: "works",
-      action: (e) => {
-        e.preventDefault();
-      },
+      action: jumper("#works"),
     },
     {
       id: "peoplemenulink",
       title: "people say",
-      action: (e) => {
-        e.preventDefault();
-      },
+      action: jumper("#testimonials"),
     },
     {
       id: "contactsmenulink",

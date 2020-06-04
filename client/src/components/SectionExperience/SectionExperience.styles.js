@@ -44,6 +44,7 @@ export const SectionExpText = styled.div`
 export const SectionExpBot = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: min-content;
   @media only screen and (max-width: 325px) {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
