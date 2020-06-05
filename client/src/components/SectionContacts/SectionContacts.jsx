@@ -7,7 +7,14 @@ import ContactForm from "../ContactForm/ContactForm";
 import ClientsCollection from "../ClientsCollection/ClientsCollection";
 
 // sc
-import {} from "./SectionContacts.styles";
+import {
+  SectionContactsContainer,
+  SectionContactsWrap,
+  SectionContactsTop,
+  SectionContactsTopTitle,
+  SectionContactsBot,
+  SectionContactsBotTitle,
+} from "./SectionContacts.styles";
 
 // constants
 import { sectionContactsConstants } from "./SectionConctacts.constants";
@@ -15,30 +22,22 @@ import { sectionContactsConstants } from "./SectionConctacts.constants";
 const SectionContacts = () => {
   const { titleLeft, titleRight } = sectionContactsConstants;
   return (
-    <section className="contacts">
-      <div className="contacts__wrap">
-        <div className="contacts__top">
-          <div className="contacts__top--title">
+    <SectionContactsContainer id="contacts">
+      <SectionContactsWrap>
+        <SectionContactsTop>
+          <SectionContactsTopTitle>
             <HeaderMedium title={titleLeft} />
-          </div>
+          </SectionContactsTopTitle>
           <ContactForm />
-        </div>
-        <div className="contacts__bot">
-          <div className="contacts__bot--title">
+        </SectionContactsTop>
+        <SectionContactsBot>
+          <SectionContactsBotTitle>
             <HeaderMedium title={titleRight} />
-          </div>
+          </SectionContactsBotTitle>
           <ClientsCollection />
-        </div>
-        {/* <div className="contacts__top">
-          <HeaderMedium title={titleLeft} />
-          <HeaderMedium title={titleRight} />
-        </div>
-        <div className="contacts__bot">
-          <ContactForm />
-          <ClientsCollection />
-        </div> */}
-      </div>
-    </section>
+        </SectionContactsBot>
+      </SectionContactsWrap>
+    </SectionContactsContainer>
   );
 };
 

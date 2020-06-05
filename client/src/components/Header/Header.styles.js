@@ -10,7 +10,6 @@ const getRespectiveBgColor = ({ scroll }) =>
     : `background-color: transparent;`;
 
 export const HeaderContainer = styled(Headroom)`
-  grid-column: full-start / full-end;
   height: 8rem;
   background-color: transparent;
   position: absolute;

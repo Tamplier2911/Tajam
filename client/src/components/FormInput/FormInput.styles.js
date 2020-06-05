@@ -1,5 +1,52 @@
 import styled from "styled-components";
 
+const getWierdStyle = ({ wierdForm }) => {
+  if (wierdForm) {
+    return `
+      color: var(--cl-fontA);
+      border-radius: none;
+      border: 0.1rem solid var(--cl-fontX);
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border: 0.1rem solid var(--cl-fontA);
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+        -webkit-text-fill-color: var(--cl-fontA) !important;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    `;
+  }
+  return `
+    color: var(--cl-primary);
+    border-radius: 5px;
+    border: 0.1rem solid var(--cl-form);
+
+    &:focus {
+      // outline: 0.1rem solid var(--cl-primary);
+      //   box-shadow: 0rem 0rem 0.2rem var(--cl-primary);
+      outline: none;
+      box-shadow: none;
+      border: 0.1rem solid var(--cl-primary);
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+      -webkit-text-fill-color: var(--cl-primary) !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  `;
+};
+
 export const FormInputContainer = styled.div`
   display: grid;
 `;
@@ -7,32 +54,14 @@ export const FormInputContainer = styled.div`
 export const FormInputLabel = styled.label``;
 
 export const FormInputElement = styled.input`
+  ${getWierdStyle}
   font-family: var(--font-text);
-  color: var(--cl-primary);
   padding: 1rem 1rem;
-  border-radius: 5px;
   background-color: transparent !important;
-  border: 0.1rem solid var(--cl-form);
+  min-width: 4rem;
 
   &::placeholder {
     color: var(--cl-fontW);
-  }
-
-  &:focus {
-    // outline: 0.1rem solid var(--cl-primary);
-    //   box-shadow: 0rem 0rem 0.2rem var(--cl-primary);
-    outline: none;
-    box-shadow: none;
-    border: 0.1rem solid var(--cl-primary);
-  }
-
-  &:-webkit-autofill,
-  &:-webkit-autofill:hover,
-  &:-webkit-autofill:focus,
-  &:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-    -webkit-text-fill-color: var(--cl-primary) !important;
-    transition: background-color 5000s ease-in-out 0s;
   }
 
   &::-moz-focus-inner {

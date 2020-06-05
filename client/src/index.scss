@@ -1,3 +1,5 @@
+/*
+
 :root {
   // TYPOGRAPHY
   --font-title: "Open Sans", sans-serif, -apple-system, BlinkMacSystemFont,
@@ -15,6 +17,7 @@
   --cl-fontA: #ebebeb;
   --cl-fontB: #747474;
   --cl-fontW: #c9c9c9;
+  --cl-fontX: rgba(230, 230, 230, 0.445);
   --cl-white: #ffffff;
   --cl-black: #000;
   --cl-bg: #13102d;
@@ -96,7 +99,7 @@ code {
   color: var(--cl-white);
 }
 
-/* REMOVE SAFARI ZOOM */
+// REMOVE SAFARI ZOOM 
 select,
 textarea,
 input[type="text"],
@@ -123,3 +126,5 @@ input[type="color"] {
 #menu {
   position: relative;
 }
+
+*/

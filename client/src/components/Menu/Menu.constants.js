@@ -35,9 +35,7 @@ export const menuConstants = {
     {
       id: "contactsmenulink",
       title: "contacts",
-      action: (e) => {
-        e.preventDefault();
-      },
+      action: jumper("#contacts"),
     },
   ],
 };

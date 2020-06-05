@@ -1,4 +1,4 @@
-import "./LandingPage.scss";
+// import "./LandingPage.scss";
 import React from "react";
 
 // sections
@@ -12,11 +12,11 @@ import SectionTestimonials from "../../components/SectionTestimonials/SectionTes
 import SectionContacts from "../../components/SectionContacts/SectionContacts";
 
 // sc
-import {} from "./LandingPage.styles";
+import { LandingPageMain } from "./LandingPage.styles";
 
 const LandingPage = () => {
   return (
-    <main className="landingPage">
+    <LandingPageMain>
       <SectionHero />
       <SectionStory />
       <SectionWatch />
@@ -25,7 +25,7 @@ const LandingPage = () => {
       <WorksSection />
       <SectionTestimonials />
       <SectionContacts />
-    </main>
+    </LandingPageMain>
   );
 };
 

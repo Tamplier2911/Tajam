@@ -1,8 +1,12 @@
-import "./ClientsCollection.scss";
+// import "./ClientsCollection.scss";
 import React from "react";
 
 // cs
-import {} from "./ClientsCollection.styles";
+import {
+  ClientsCollectionContainer,
+  ClientsCollectionImgWrap,
+  ClientsCollectionImg,
+} from "./ClientsCollection.styles";
 
 // constants
 import { clientsCollectionConstants } from "./ClientsCollection.constants";
@@ -10,16 +14,16 @@ import { clientsCollectionConstants } from "./ClientsCollection.constants";
 const ClientsCollection = () => {
   const { clients } = clientsCollectionConstants;
   return (
-    <div className="clients">
+    <ClientsCollectionContainer>
       {clients.map((client) => {
         const { id, image } = client;
         return (
-          <div className="clients__imgwrap" key={id}>
-            <img className="clients__img" src={image} alt="happy client" />
-          </div>
+          <ClientsCollectionImgWrap key={id}>
+            <ClientsCollectionImg src={image} alt="happy client" />
+          </ClientsCollectionImgWrap>
         );
       })}
-    </div>
+    </ClientsCollectionContainer>
   );
 };
 

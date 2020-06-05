@@ -1,0 +1,49 @@
+/*
+
+.chatBubble {
+  &--me {
+    color: var(--cl-fontA);
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 2rem;
+    padding: 1rem;
+  }
+  &--meav {
+    & svg {
+      width: 4rem;
+      height: 4rem;
+      fill: var(--cl-secondary);
+    }
+  }
+
+  &--memsg {
+    background-color: var(--cl-secondary);
+    border-radius: 5rem;
+    padding: 2rem;
+    word-break: break-word;
+  }
+
+  &--he {
+    color: var(--cl-fontA);
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-column-gap: 2rem;
+    padding: 1rem;
+  }
+  &--heav {
+    order: 2;
+    & svg {
+      width: 4rem;
+      height: 4rem;
+      fill: var(--cl-primary);
+    }
+  }
+  &--hemsg {
+    background-color: var(--cl-primary);
+    border-radius: 5rem;
+    padding: 2rem;
+    word-break: break-word;
+  }
+}
+
+*/

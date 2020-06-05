@@ -1,4 +1,4 @@
-import "./ContactForm.scss";
+// import "./ContactForm.scss";
 import React, { useState } from "react";
 
 // components
@@ -7,7 +7,10 @@ import TextInput from "../TextInput/TextInput";
 import Button from "../Button/Button";
 
 // sc
-import {} from "./ContactForm.styles";
+import {
+  ContactsFormContainer,
+  ContactsFormElement,
+} from "./ContactForm.styles";
 
 const ContactForm = () => {
   const [userCredentials, setUserCredentials] = useState({
@@ -20,22 +23,19 @@ const ContactForm = () => {
 
   const onInputChange = (e) => {
     const { name, value } = e.target;
+    // handle errors
     setUserCredentials({ ...userCredentials, [name]: value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
     // validate here
-    console.log(userCredentials);
+    alert(`${name}, ${email}, ${subject}, ${message}`);
   };
 
   return (
-    <div className="contactForm">
-      <form
-        className="contactForm__element"
-        autoComplete="off"
-        onSubmit={(e) => onSubmit(e)}
-      >
+    <ContactsFormContainer>
+      <ContactsFormElement autoComplete="off" onSubmit={(e) => onSubmit(e)}>
         <FormInput
           onInputChange={onInputChange}
           value={name}
@@ -73,8 +73,8 @@ const ContactForm = () => {
           required
         />
         <Button title="submit" type="submit" />
-      </form>
-    </div>
+      </ContactsFormElement>
+    </ContactsFormContainer>
   );
 };
 

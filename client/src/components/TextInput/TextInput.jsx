@@ -1,23 +1,23 @@
-import "./TextInput.scss";
+// import "./TextInput.scss";
 import React from "react";
 
 // sc
+import {
+  TextInputContainer,
+  TextInputLabel,
+  TextInputArea,
+} from "./TextInput.styles";
 
 const TextInput = ({ id, label, onInputChange, value, ...otherProps }) => {
   return (
-    <div className="textInput">
-      {label ? (
-        <label className="textInput__label" htmlFor={id}>
-          {label}
-        </label>
-      ) : null}
-      <textarea
+    <TextInputContainer>
+      {label ? <TextInputLabel htmlFor={id}>{label}</TextInputLabel> : null}
+      <TextInputArea
         id={id}
-        className="textInput__element"
         onChange={(e) => onInputChange(e)}
         {...otherProps}
       />
-    </div>
+    </TextInputContainer>
   );
 };
 

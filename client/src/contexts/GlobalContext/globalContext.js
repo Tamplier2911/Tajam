@@ -5,14 +5,19 @@ const Context = createContext({});
 export const GlobalContext = ({ children }) => {
   const [appState, setAppState] = useState({
     menu: { menuHidden: true },
+    chat: { chatHidden: true },
     testimonials: {
       current: 2,
     },
   });
-  const { menu, testimonials } = appState;
+  const { menu, chat, testimonials } = appState;
 
   const toggleMenu = () => {
     setAppState({ ...appState, menu: { menuHidden: !menu.menuHidden } });
+  };
+
+  const toggleChat = () => {
+    setAppState({ ...appState, chat: { chatHidden: !chat.chatHidden } });
   };
 
   const setTestimonialNext = () => {
@@ -38,6 +43,8 @@ export const GlobalContext = ({ children }) => {
       value={{
         menu,
         toggleMenu,
+        chat,
+        toggleChat,
         testimonials,
         setTestimonialNext,
         setTestimonialPrev,

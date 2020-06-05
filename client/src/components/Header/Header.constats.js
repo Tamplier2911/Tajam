@@ -35,9 +35,7 @@ export const headerConstants = {
     {
       id: "contactslink",
       title: "contacts",
-      action: (e) => {
-        e.preventDefault();
-      },
+      action: jumper("#contacts"),
     },
   ],
 };
