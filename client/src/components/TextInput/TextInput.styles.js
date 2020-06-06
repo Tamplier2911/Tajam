@@ -9,7 +9,8 @@ export const TextInputLabel = styled.label`
   position: absolute;
   bottom: 1rem;
   right: 2rem;
-  visibility: hidden;
+  transform: scale(0);
+  // visibility: hidden;
 `;
 
 export const TextInputArea = styled.textarea`

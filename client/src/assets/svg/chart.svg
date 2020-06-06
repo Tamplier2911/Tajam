@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Capacitor_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-28.875" y1="556.751" x2="-28.875" y2="615.082" gradientTransform="matrix(8 0 0 -8 455 4941)">
+<linearGradient id="SVGID_1_2" gradientUnits="userSpaceOnUse" x1="-28.875" y1="556.751" x2="-28.875" y2="615.082" gradientTransform="matrix(8 0 0 -8 455 4941)">
 	<stop  offset="0" style="stop-color:#006DF0"/>
 	<stop  offset="1" style="stop-color:#00E7F0"/>
 </linearGradient>
-<path style="fill:url(#SVGID_1_);" d="M440,248H232V40c0-4.418-3.582-8-8-8C100.288,32,0,132.288,0,256s100.288,224,224,224
+<path style="fill:url(#SVGID_1_2);" d="M440,248H232V40c0-4.418-3.582-8-8-8C100.288,32,0,132.288,0,256s100.288,224,224,224
 	s224-100.288,224-224C448,251.582,444.418,248,440,248z M224,464c-114.874-0.584-207.524-94.182-206.939-209.055
 	C17.625,144.003,105.162,53.031,216,48.2V256c0,4.418,3.582,8,8,8h207.8C427.388,375.611,335.698,463.86,224,464L224,464z"/>
-<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-11.375" y1="556.751" x2="-11.375" y2="615.082" gradientTransform="matrix(8 0 0 -8 455 4941)">
+<linearGradient id="SVGID_2_3" gradientUnits="userSpaceOnUse" x1="-11.375" y1="556.751" x2="-11.375" y2="615.082" gradientTransform="matrix(8 0 0 -8 455 4941)">
 	<stop  offset="0" style="stop-color:#006DF0"/>
 	<stop  offset="1" style="stop-color:#00E7F0"/>
 </linearGradient>
-<path style="fill:url(#SVGID_2_);" d="M256,0c-4.418,0-8,3.582-8,8v216c0,4.418,3.582,8,8,8h216c4.418,0,8-3.582,8-8
+<path style="fill:url(#SVGID_2_3);" d="M256,0c-4.418,0-8,3.582-8,8v216c0,4.418,3.582,8,8,8h216c4.418,0,8-3.582,8-8
 	C479.859,100.347,379.653,0.141,256,0z M264,16.2c108.514,4.304,195.496,91.286,199.8,199.8H264V16.2z"/>
 <g>
 </g>
