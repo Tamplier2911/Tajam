@@ -2,10 +2,14 @@ import styled from "styled-components";
 
 export const TextInputContainer = styled.div`
   display: grid;
+  position relative
 `;
 
 export const TextInputLabel = styled.label`
-  display: none;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  visibility: hidden;
 `;
 
 export const TextInputArea = styled.textarea`

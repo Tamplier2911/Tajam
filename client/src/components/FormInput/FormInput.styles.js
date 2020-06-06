@@ -49,10 +49,14 @@ const getWierdStyle = ({ wierdForm }) => {
 
 export const FormInputContainer = styled.div`
   display: grid;
+  position: relative;
 `;
 
 export const FormInputLabel = styled.label`
-  display: none;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  visibility: hidden;
 `;
 
 export const FormInputElement = styled.input`
