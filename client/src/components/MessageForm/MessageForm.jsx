@@ -40,6 +40,7 @@ const MessageForm = ({ wipe }) => {
           name="message"
           type="text"
           placeholder="Message..."
+          label="Message"
           id="usermessageid"
         />
         <MessageFormWipe onClick={() => wipe()}>

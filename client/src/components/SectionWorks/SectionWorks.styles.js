@@ -66,7 +66,7 @@ export const SectionWorksLink = styled.a`
   &:link,
   &:visited {
     text-decoration: none;
-    color: var(--cl-fontW);
+    color: var(--cl-fontLink);
     transition: color 0.3s;
   }
 

@@ -4,9 +4,10 @@ import React from "react";
 // sc
 import { ButtonWrapper } from "./Button.styles";
 
-const Button = ({ title, action, type }) => {
+const Button = ({ title, action, type, color }) => {
   return (
     <ButtonWrapper
+      color={color}
       onClick={() => (action ? action() : () => {})}
       type={type ? type : "button"}
     >

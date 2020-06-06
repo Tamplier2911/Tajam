@@ -85,7 +85,8 @@ export const CardSvgWrapper = styled.div`
   }
 `;
 
-export const CardTitle = styled.h4`
+export const CardTitle = styled.div`
+  font-weight: bold;
   font-size: 1.6rem;
   text-transform: uppercase;
 `;

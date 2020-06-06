@@ -42,6 +42,8 @@ const CreateUserForm = () => {
           type="text"
           id="usernameforminput"
           placeholder="Pick a random name"
+          label="User Name"
+          required
         />
         <Button title="Login to Chat" type="submit" />
       </CreateUserFormElement>

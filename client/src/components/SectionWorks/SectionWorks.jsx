@@ -53,7 +53,7 @@ const SectionWorks = () => {
       </SectionWorksMid>
       <SectionWorksBot>
         <SectionWorksCta>
-          <Button title={button} />
+          <Button title={button} color="dark" />
         </SectionWorksCta>
       </SectionWorksBot>
     </SectionWorksContainer>

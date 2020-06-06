@@ -51,7 +51,9 @@ export const FormInputContainer = styled.div`
   display: grid;
 `;
 
-export const FormInputLabel = styled.label``;
+export const FormInputLabel = styled.label`
+  display: none;
+`;
 
 export const FormInputElement = styled.input`
   ${getWierdStyle}

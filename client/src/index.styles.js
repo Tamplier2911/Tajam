@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     --cl-fontA: #ebebeb;
     --cl-fontB: #747474;
     --cl-fontW: #c9c9c9;
+    --cl-fontLink: #575757;
     --cl-fontX: rgba(230, 230, 230, 0.445);
     --cl-white: #ffffff;
     --cl-black: #000;

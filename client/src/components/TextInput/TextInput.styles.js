@@ -4,7 +4,9 @@ export const TextInputContainer = styled.div`
   display: grid;
 `;
 
-export const TextInputLabel = styled.label``;
+export const TextInputLabel = styled.label`
+  display: none;
+`;
 
 export const TextInputArea = styled.textarea`
   font-family: var(--font-text);

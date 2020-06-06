@@ -39,6 +39,7 @@ const SubscribeForm = () => {
           type="email"
           placeholder="Subscribe our newslatter"
           id="emailsubscribe"
+          label="Email address"
           wierdForm={1}
         />
         <SubscribeFormLabel htmlFor="submissive">

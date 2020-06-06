@@ -38,7 +38,7 @@ const SectionStory = () => {
           <SectionStoryInfoText>{firstText}</SectionStoryInfoText>
           <SectionStoryInfoText>{secondText}</SectionStoryInfoText>
           <SectionStoryInfoCTA>
-            <Button title={button} />
+            <Button title={button} color="dark" />
           </SectionStoryInfoCTA>
         </SectionStoryInfo>
       </SectionStoryContent>

@@ -43,6 +43,7 @@ const ContactForm = () => {
           type="text"
           id="formInputName"
           placeholder="Name"
+          label="Name"
           required
         />
         <FormInput
@@ -52,6 +53,7 @@ const ContactForm = () => {
           type="email"
           id="formInputEmail"
           placeholder="Email"
+          label="Email"
           required
         />
         <FormInput
@@ -61,6 +63,7 @@ const ContactForm = () => {
           type="text"
           id="formInputSubject"
           placeholder="Subject"
+          label="Subject"
           required
         />
         <TextInput
@@ -70,9 +73,10 @@ const ContactForm = () => {
           id="formTextMessage"
           rows="6"
           placeholder="Message"
+          label="Message"
           required
         />
-        <Button title="submit" type="submit" />
+        <Button title="submit" type="submit" color="dark" />
       </ContactsFormElement>
     </ContactsFormContainer>
   );
