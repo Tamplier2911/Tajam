@@ -23,6 +23,7 @@ import { sectionTeamConstants } from "./SectionTeam.constants";
 
 const SectionTeam = () => {
   const { team, title, textTop, textBot, button } = sectionTeamConstants;
+
   return (
     <SectionTeamContainer id="team">
       <SectionTeamWrap>

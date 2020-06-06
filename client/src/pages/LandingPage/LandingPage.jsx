@@ -1,6 +1,10 @@
 // import "./LandingPage.scss";
 import React from "react";
 
+// contexts
+import { TestimonialsContext } from "../../contexts/TestimonialsContxt/TestimonialsContext";
+import { HeroContext } from "../../contexts/HeroContext/HeroContext";
+
 // sections
 import SectionHero from "../../components/SectionHero/SectionHero";
 import SectionStory from "../../components/SectionStory/SectionStory";
@@ -17,13 +21,17 @@ import { LandingPageMain } from "./LandingPage.styles";
 const LandingPage = () => {
   return (
     <LandingPageMain>
-      <SectionHero />
+      <HeroContext>
+        <SectionHero />
+      </HeroContext>
       <SectionStory />
       <SectionWatch />
       <SectionExperience />
       <SectionTeam />
       <WorksSection />
-      <SectionTestimonials />
+      <TestimonialsContext>
+        <SectionTestimonials />
+      </TestimonialsContext>
       <SectionContacts />
     </LandingPageMain>
   );

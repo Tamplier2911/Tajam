@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 
 // context
-import AppStore from "../../contexts/GlobalContext/globalContext";
+import TestimonialsStore from "../../contexts/TestimonialsContxt/TestimonialsContext";
 
 // sc
 import {
@@ -25,7 +25,7 @@ import {
 
 // constants
 import { sectionTestimonialsConstants } from "./SectionTestimonials.constats";
-
+//
 const SectionTestimonials = () => {
   const { images, people } = sectionTestimonialsConstants;
 
@@ -33,7 +33,7 @@ const SectionTestimonials = () => {
     testimonials: { current },
     setTestimonialNext,
     setTestimonialPrev,
-  } = useContext(AppStore);
+  } = useContext(TestimonialsStore);
 
   const { name, position, review } = people[current];
 

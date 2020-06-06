@@ -3,6 +3,11 @@ import styled from "styled-components";
 // svg
 import { ReactComponent as AvatarSVG } from "../../assets/svg/avatar.svg";
 
+const getProperBodyStyiles = ({ log }) => {
+  if (log) return ``;
+  return `grid-auto-rows: min-content;`;
+};
+
 export const ChatWindowContainer = styled.div`
   position: fixed;
   width: 100vw;
@@ -68,12 +73,13 @@ export const ChatWindowHeadName = styled.div`
 `;
 
 export const ChatWindowBody = styled.div`
+  ${getProperBodyStyiles}
   padding: 2rem;
 
   overflow-y: scroll;
   overflow-x: hidden;
   display: grid;
-  grid-auto-rows: min-content;
+
   grid-row-gap: 2rem;
 
   &::-webkit-scrollbar {

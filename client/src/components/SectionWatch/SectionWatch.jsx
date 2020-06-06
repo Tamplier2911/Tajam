@@ -15,6 +15,7 @@ import { sectionWatchConstants } from "./SectionWatch.constants";
 
 const SectionWatch = () => {
   const { title } = sectionWatchConstants;
+
   return (
     <SectionWatchContainer id="watch">
       <SectionWatchCta>

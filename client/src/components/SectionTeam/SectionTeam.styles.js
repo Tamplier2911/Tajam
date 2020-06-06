@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 // image
 import teamBg from "../../assets/jpg/team.jpg";
+import teamLaptop from "../../assets/jpg/team-laptop.jpg";
+import teamTablet from "../../assets/jpg/team-tablet.jpg";
+import teamPhone from "../../assets/jpg/team-phone.jpg";
 
 export const SectionTeamContainer = styled.section`
   grid-column: full-start / full-end;
@@ -9,12 +12,42 @@ export const SectionTeamContainer = styled.section`
   grid-template-columns: 1fr minmax(0rem, 117rem) 1fr;
   padding: 7rem 0rem;
 
-  background-image: linear-gradient(
-      to bottom right,
-      var(--cl-primaryGd),
-      var(--cl-bgGd)
-    ),
-    url(${teamBg});
+  @media only screen and (min-width: 1025px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${teamBg});
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${teamLaptop});
+  }
+
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${teamTablet});
+  }
+
+  @media only screen and (min-width: 190px) and (max-width: 425px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${teamPhone});
+  }
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

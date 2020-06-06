@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SectionExpContainer = styled.div`
+export const SectionExpContainer = styled.section`
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: 1fr minmax(0rem, 117rem) 1fr;

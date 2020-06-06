@@ -14,6 +14,8 @@ const svgStyle = css`
   width: 3rem;
   height: 3rem;
 
+  fill: var(--cl-primary);
+
   transition: fill 0.3s;
   &:hover {
     fill: var(--cl-tertiary);

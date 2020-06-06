@@ -2,6 +2,9 @@ import styled, { css } from "styled-components";
 
 // image
 import HeroImage from "../../assets/jpg/hero.jpg";
+import HeroImageLaptop from "../../assets/jpg/hero-laptop.jpg";
+import HeroImageTablet from "../../assets/jpg/hero-tablet.jpg";
+import HeroImagePhone from "../../assets/jpg/hero-phone.jpg";
 
 const sharedCircleStyles = css`
   cursor: pointer;
@@ -10,6 +13,18 @@ const sharedCircleStyles = css`
   border-radius: 50%;
   transition: 0.3s background-color;
 `;
+
+const fadeInText = (props) => {
+  const { load } = props;
+  if (!load) {
+    return `opacity: 0;`;
+  } else if (load) {
+    return `
+        opacity: 1;
+        transition: opacity 1s ease-in;
+      `;
+  }
+};
 
 const getCircleBgColor = ({ active }) =>
   active
@@ -32,12 +47,43 @@ export const SectionHeroContainer = styled.section`
   align-content: center;
   justify-items: center;
   min-height: 70vh;
-  background-image: linear-gradient(
-      to bottom right,
-      var(--cl-bgGd),
-      var(--cl-primaryGd)
-    ),
-    url(${HeroImage});
+
+  @media only screen and (min-width: 1025px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${HeroImage});
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${HeroImageLaptop});
+  }
+
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${HeroImageTablet});
+  }
+
+  @media only screen and (min-width: 190px) and (max-width: 425px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${HeroImagePhone});
+  }
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,8 +132,10 @@ export const SectionHeroHeader = styled.h1`
 `;
 
 export const SectionHeroText = styled.p`
+  ${fadeInText}
   color: var(--cl-fontW);
   font-size: 1.6rem;
+  min-height: 7.5rem;
 `;
 
 export const SectionHeroCta = styled.div``;

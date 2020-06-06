@@ -2,6 +2,9 @@ import styled, { css } from "styled-components";
 
 // image
 import testimonials from "../../assets/jpg/testimonials.jpg";
+import testimonialsLaptop from "../../assets/jpg/testimonials-laptop.jpg";
+import testimonialsTablet from "../../assets/jpg/testimonials-tablet.jpg";
+import testimonialsPhone from "../../assets/jpg/testimonials-phone.jpg";
 
 // svg
 import { ReactComponent as QuoteSVG } from "../../assets/svg/quote.svg";
@@ -54,12 +57,41 @@ export const SectionTestimonialsContainer = styled.section`
 
   padding: 8rem 0rem;
 
-  background-image: linear-gradient(
-      to bottom right,
-      var(--cl-primaryGd),
-      var(--cl-bgGd)
-    ),
-    url(${testimonials});
+  @media only screen and (min-width: 1025px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${testimonials});
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${testimonialsLaptop});
+  }
+
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${testimonialsTablet});
+  }
+
+  @media only screen and (min-width: 190px) and (max-width: 425px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${testimonialsPhone});
+  }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -162,10 +194,11 @@ export const SectionTestimonialsArrLeft = styled(LeftSVG)`
 
 export const SectionTestimonialsImgBar = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(5rem, 1fr));
   grid-column-gap: 1rem;
   align-items: center;
   justify-items: center;
+  height: 5rem;
 
   @media only screen and (max-width: 275px) {
     display: none;
@@ -176,6 +209,7 @@ export const SectionTestimonialsAvatarWrap = styled.div`
   ${getActiveImageSize}
   border-radius: 50%;
   overflow: hidden;
+  transition: width 0.3s, height 0.3s;
 `;
 
 export const SectionTestimonialsAvatarImg = styled.img`

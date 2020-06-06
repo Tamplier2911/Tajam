@@ -38,8 +38,7 @@ export const sectionTestimonialsConstants = {
     {
       name: "Charmander",
       position: "Holy Inquisition",
-      review:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur distinctio maiores unde cumque asperiores quos ipsum omnis sed tempora ex provident laudantium deleniti sapiente, impedit optio odio magnam dolores et? Pariatur distinctio maiores unde cumque asperiores quos ipsum omnis sed tempora ex provident laudantium deleniti sapiente, impedit optio odio magnam dolores et?",
+      review: "Ave Maria! Deus vult!",
     },
     {
       name: "Squirtle",

@@ -1,7 +1,10 @@
 import styled, { css } from "styled-components";
 
 // footer image
-import footerimage from "../../assets/jpg/footer.jpg";
+import footerBg from "../../assets/jpg/footer.jpg";
+import footerBgLaptop from "../../assets/jpg/footer-laptop.jpg";
+import footerBgTablet from "../../assets/jpg/footer-tablet.jpg";
+import footerBgPhone from "../../assets/jpg/footer-phone.jpg";
 
 // svgs
 import { ReactComponent as GeoSVG } from "../../assets/svg/geo.svg";
@@ -38,12 +41,41 @@ export const FooterContainer = styled.footer`
     padding: 4rem 0rem;
   }
 
-  background-image: linear-gradient(
-      to bottom right,
-      var(--cl-primaryGd),
-      var(--cl-bgGd)
-    ),
-    url(${footerimage});
+  @media only screen and (min-width: 1025px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${footerBg});
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${footerBgLaptop});
+  }
+
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${footerBgTablet});
+  }
+
+  @media only screen and (min-width: 190px) and (max-width: 425px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${footerBgPhone});
+  }
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 // image
-import cityimg from "../../assets/jpg/city.jpg";
+import city from "../../assets/jpg/city.jpg";
+import cityLaptop from "../../assets/jpg/city-laptop.jpg";
+import cityTablet from "../../assets/jpg/city-tablet.jpg";
+import cityPhone from "../../assets/jpg/city-phone.jpg";
 
 // svg
 import { ReactComponent as PlaySVG } from "../../assets/svg/play-button.svg";
@@ -12,12 +15,42 @@ export const SectionWatchContainer = styled.section`
   grid-template-columns: 1fr minmax(0rem, 117rem) 1fr;
   padding: 20rem 0rem;
 
-  background-image: linear-gradient(
-      to bottom right,
-      var(--cl-primaryGd),
-      var(--cl-bgGd)
-    ),
-    url(${cityimg});
+  @media only screen and (min-width: 1025px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${city});
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${cityLaptop});
+  }
+
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${cityTablet});
+  }
+
+  @media only screen and (min-width: 190px) and (max-width: 425px) {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--cl-bgGd),
+        var(--cl-primaryGd)
+      ),
+      url(${cityPhone});
+  }
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
