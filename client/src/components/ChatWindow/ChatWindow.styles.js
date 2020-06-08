@@ -37,8 +37,8 @@ export const ChatWindowWrap = styled.div`
   box-shadow: 0rem 0.2rem 0.4rem var(--cl-shadow);
 
   @media only screen and (max-width: 768px) {
-    width: 100vw;
-    height: 100vh;
+    width: 80vw;
+    height: 80vh;
   }
 `;
 

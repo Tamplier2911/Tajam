@@ -2,6 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 :root {
+
+    // Z-INDEX
+    ChatWindow: 20;
+    ChatButton: 5;
+    Menu: 10;
+
     // TYPOGRAPHY
     --font-title: "Open Sans", sans-serif, -apple-system, BlinkMacSystemFont,
       "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",

@@ -70,4 +70,6 @@ export const MessageWindowBot = styled.div`
   display: grid;
   padding: 0rem 2rem;
   align-items: center;
+
+  box-shadow: 0.2rem 0rem 0.4rem var(--cl-shadow);
 `;

@@ -57,6 +57,8 @@ export const MessageTextWrap = styled.div`
   border-radius: 5rem;
   padding: 2rem 1rem;
   word-break: break-word;
+
+  box-shadow: 0rem 0.2rem 0.4rem var(--cl-shadow);
 `;
 
 export const MessageText = styled.div`

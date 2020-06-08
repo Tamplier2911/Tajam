@@ -10,7 +10,8 @@ import {
   MessagesCollectionContainer,
   MessagesCollectionUsersBtn,
   MessagesCollectionUsersBar,
-  MessageCollectionUserName,
+  MessagesCollectionUserName,
+  MessagesCollectionUsersSVG,
 } from "./MessagesCollection.styles";
 
 // utils
@@ -47,15 +48,17 @@ const MessagesCollection = ({ messages, users, userName }) => {
             ? setUsersHidden((usersHidden) => !usersHidden)
             : setUsersHidden(false)
         }
-      />
+      >
+        <MessagesCollectionUsersSVG />
+      </MessagesCollectionUsersBtn>
       {usersHidden === false ? (
         <MessagesCollectionUsersBar>
           {users
             ? users.map((user, i) => {
                 return (
-                  <MessageCollectionUserName key={i}>
+                  <MessagesCollectionUserName key={i}>
                     {user.name}
-                  </MessageCollectionUserName>
+                  </MessagesCollectionUserName>
                 );
               })
             : null}

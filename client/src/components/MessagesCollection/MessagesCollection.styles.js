@@ -1,5 +1,8 @@
 import styled, { css } from "styled-components";
 
+// svg
+import { ReactComponent as UsersSVG } from "../../assets/svg/users.svg";
+
 const getProperBodyStyle = ({ log }) => {
   if (log) return ``;
   return `grid-auto-rows: min-content;`;
@@ -85,6 +88,14 @@ export const MessagesCollectionContainer = styled.div`
   }
 `;
 
+export const MessagesCollectionUsersSVG = styled(UsersSVG)`
+  width: 3rem;
+  height: 3rem;
+  fill: var(--cl-secondary);
+
+  transition: fill 0.3s;
+`;
+
 export const MessagesCollectionUsersBtn = styled.div`
   cursor: pointer;
   position: fixed;
@@ -97,6 +108,18 @@ export const MessagesCollectionUsersBtn = styled.div`
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   background-color: var(--cl-primary);
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  box-shadow: 0rem 0.2rem 0.4rem var(--cl-shadow);
+
+  @media (hover: hover) {
+    &:hover ${MessagesCollectionUsersSVG} {
+      fill: var(--cl-tertiary);
+    }
+  }
 `;
 
 export const MessagesCollectionUsersBar = styled.div`
@@ -116,7 +139,7 @@ export const MessagesCollectionUsersBar = styled.div`
   animation: fadeIn 0.5s;
 `;
 
-export const MessageCollectionUserName = styled.div`
+export const MessagesCollectionUserName = styled.div`
   cursor: pointer;
   font-size: 1.8rem;
   color: var(--cl-primary);

@@ -53,6 +53,7 @@ export const ChatButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: fixed;
+  z-index: 5;
 
   width: 6rem;
   height: 6rem;
