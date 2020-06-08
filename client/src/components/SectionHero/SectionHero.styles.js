@@ -29,16 +29,22 @@ const fadeInText = (props) => {
 const getCircleBgColor = ({ active }) =>
   active
     ? `
-  background-color: var(--cl-tertiary);
-  &:hover {
-    background-color: var(--cl-secondary);
-  }`
+    background-color: var(--cl-tertiary);
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--cl-secondary);
+      }
+    }
+  `
     : `
-  border: 0.1rem solid var(--cl-fontW);
-  &:hover {
-    background-color: var(--cl-secondary);
-    border: none;
-  }`;
+    border: 0.1rem solid var(--cl-fontW);
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--cl-secondary);
+        border: none;
+      }
+    }
+  `;
 
 export const SectionHeroContainer = styled.section`
   grid-column: full-start / full-end;
@@ -108,6 +114,10 @@ export const SectionHeroContent = styled.div`
   @media only screen and (max-width: 375px) {
     grid-row-gap: 4rem;
   }
+
+  @media only screen and (max-width: 325px) {
+    grid-row-gap: 2rem;
+  }
 `;
 
 export const SectionHeroMessage = styled.div`
@@ -135,8 +145,20 @@ export const SectionHeroText = styled.p`
   ${fadeInText}
   color: var(--cl-fontW);
   font-size: 1.6rem;
-  min-height: 7.5rem;
-  // height: 7.5rem;
+  // min-height: 7.5rem;
+  height: 7.5rem;
+
+  @media only screen and (max-width: 425px) {
+    height: 10rem;
+  }
+
+  @media only screen and (max-width: 325px) {
+    height: 14rem;
+  }
+
+  @media only screen and (max-width: 275px) {
+    height: 18rem;
+  }
 `;
 
 export const SectionHeroCta = styled.div``;
