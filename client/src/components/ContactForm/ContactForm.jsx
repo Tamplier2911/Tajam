@@ -67,7 +67,7 @@ const ContactForm = () => {
           required
         />
         <TextInput
-          onInputChange={(e) => onInputChange(e)}
+          onInputChange={onInputChange}
           value={message}
           name="message"
           id="formTextMessage"

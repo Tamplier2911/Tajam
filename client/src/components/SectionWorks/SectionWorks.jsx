@@ -6,6 +6,9 @@ import HeaderMedium from "../HeaderMedium/HeaderMedium";
 import Button from "../Button/Button";
 import WorkPreview from "../WorkPreview/WorkPreview";
 
+// utils
+import { jumper } from "../../utils/jumper";
+
 // sc
 import {
   SectionWorksContainer,
@@ -53,7 +56,7 @@ const SectionWorks = () => {
       </SectionWorksMid>
       <SectionWorksBot>
         <SectionWorksCta>
-          <Button title={button} color="dark" />
+          <Button title={button} action={jumper("#contacts")} color="dark" />
         </SectionWorksCta>
       </SectionWorksBot>
     </SectionWorksContainer>

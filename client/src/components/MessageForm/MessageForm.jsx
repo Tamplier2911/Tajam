@@ -8,16 +8,16 @@ import FormInput from "../FormInput/FormInput";
 import {
   MessageFormContainer,
   MessageFormElement,
-  MessageFormWipe,
-  MessageFormWipeSVG,
+  // MessageFormWipe,
+  // MessageFormWipeSVG,
   MessageFormLabel,
   MessageFormLabelSVG,
   MessageFormSubmit,
 } from "./MessageForm.styles";
 
-const MessageForm = ({ wipe }) => {
-  const [userMessage, setUserMessage] = useState({ user: "", message: "" });
-  const { user, message } = userMessage;
+const MessageForm = ({ onSendMessage }) => {
+  const [userMessage, setUserMessage] = useState({ message: "" });
+  const { message } = userMessage;
 
   const onInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,7 +28,8 @@ const MessageForm = ({ wipe }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     // validate
-    alert(`${user} ${message}`);
+    onSendMessage(message);
+    setUserMessage({ message: "" });
   };
 
   return (
@@ -43,9 +44,9 @@ const MessageForm = ({ wipe }) => {
           label="Message"
           id="usermessageid"
         />
-        <MessageFormWipe onClick={() => wipe()}>
+        {/* <MessageFormWipe onClick={() => wipe()}>
           <MessageFormWipeSVG />
-        </MessageFormWipe>
+        </MessageFormWipe> */}
         <MessageFormLabel htmlFor="messagesubmit">
           <MessageFormLabelSVG />
         </MessageFormLabel>

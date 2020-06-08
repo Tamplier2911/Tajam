@@ -7,6 +7,9 @@ import HeroStore from "../../contexts/HeroContext/HeroContext";
 // components
 import Button from "../Button/Button";
 
+// utils
+import { jumper } from "../../utils/jumper";
+
 // sc
 import {
   SectionHeroContainer,
@@ -42,7 +45,7 @@ const SectionHero = () => {
     setIsLoaded(0);
     setTimeout(() => {
       setIsLoaded(1);
-    }, 300);
+    }, 600);
 
     const id = setInterval(() => {
       setHeroNext();
@@ -60,7 +63,7 @@ const SectionHero = () => {
         </SectionHeroMessage>
         <SectionHeroCta>
           <SectionHeroBtn>
-            <Button title={button} action={() => {}} />
+            <Button title={button} action={jumper("#about")} />
           </SectionHeroBtn>
         </SectionHeroCta>
         <SectionHeroCirles>

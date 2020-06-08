@@ -1,6 +1,9 @@
 // import "./App.scss";
-import React from "react";
+import React, { useContext } from "react";
 import { Switch, Route } from "react-router-dom";
+
+// context
+import AppStore from "./contexts/GlobalContext/globalContext";
 
 // components
 import Header from "./components/Header/Header";
@@ -19,12 +22,14 @@ import { GlobalStyles } from "./index.styles";
 import { Container } from "./App.styles";
 
 function App() {
+  const { chat } = useContext(AppStore);
+  const { chatHidden } = chat;
   return (
     <Container>
       <GlobalStyles />
       <Header />
       <ChatButton />
-      <ChatWindow />
+      {chatHidden ? null : <ChatWindow />}
       <Menu />
       <Switch>
         <Route exact path="/" component={LandingPage} />

@@ -28,7 +28,8 @@ export const MessageFormContainer = styled.div`
 
 export const MessageFormElement = styled.form`
   display: grid;
-  grid-template-columns: 1fr repeat(2, min-content);
+  // grid-template-columns: 1fr repeat(2, min-content);
+  grid-template-columns: 1fr min-content;
   grid-column-gap: 1rem;
 `;
 

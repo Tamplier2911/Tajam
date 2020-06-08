@@ -6,6 +6,9 @@ const enforce = require("express-sslify");
 const rateLimit = require("express-rate-limit");
 const morgan = require("morgan");
 
+// routes
+// const chatRouter = require("./routes/chatRoutes");
+
 // tempo
 const snitize = require("express-mongo-sanitize");
 const hpp = require("hpp");
@@ -28,7 +31,7 @@ if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 // limiters
 const limiter = rateLimit({
-  max: 500,
+  max: 1000,
   windowMs: 60 * 60 * 1000,
   message: "Too many requests from this IP, please try again in a hour.",
 });
@@ -53,7 +56,7 @@ app.use((req, res, next) => {
 });
 
 // routing
-// app.use("/api/v1/chat", chatRouter);
+// app.use("/chat/v1/", chatRouter);
 
 if (process.env.NODE_ENV === "production") {
   // compress all response bodies

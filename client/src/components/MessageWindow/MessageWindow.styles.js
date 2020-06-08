@@ -3,7 +3,7 @@ import styled from "styled-components";
 // svg
 import { ReactComponent as AvatarSVG } from "../../assets/svg/avatar.svg";
 
-const getProperBodyStyiles = ({ log }) => {
+const getProperBodyStyle = ({ log }) => {
   if (log) return ``;
   return `grid-auto-rows: min-content;`;
 };
@@ -13,50 +13,7 @@ const getRequiredColumns = ({ headers }) =>
     ? `grid-template-columns: min-content  1fr;`
     : `grid-template-columns: min-content repeat(2, 1fr);`;
 
-export const ChatWindowContainer = styled.div`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--cl-bgGd);
-  z-index: 20;
-`;
-
-export const ChatWindowWrap = styled.div`
-  position: fixed;
-
-  display: grid;
-  grid-template-rows: 6rem 1fr 6rem;
-
-  width: 70rem;
-  height: 50rem;
-  left: 50%;
-  top: 50%;
-  background-color: var(--cl-white);
-
-  transform: translate(-50%, -50%);
-  box-shadow: 0rem 0.2rem 0.4rem var(--cl-shadow);
-
-  @media only screen and (max-width: 768px) {
-    width: 100vw;
-    height: 100vh;
-  }
-`;
-
-export const ChatWindowClose = styled.div`
-  cursor: pointer;
-  position: absolute;
-  right: 2rem;
-  top: 0.8rem;
-  font-size: 2.5rem;
-  color: var(--cl-fontA);
-
-  transition: color 0.3s;
-  &:hover {
-    color: var(--cl-fontX);
-  }
-`;
-
-export const ChatWindowHead = styled.div`
+export const MessageWindowHead = styled.div`
   display: grid;
   ${getRequiredColumns}
   align-items: center;
@@ -65,15 +22,15 @@ export const ChatWindowHead = styled.div`
   background-image: linear-gradient(to right, var(--cl-bg), var(--cl-primary));
 `;
 
-export const ChatWindowHeadAvatar = styled.div``;
+export const MessageWindowHeadAvatar = styled.div``;
 
-export const ChatWindowHeadAvatarSVG = styled(AvatarSVG)`
+export const MessageWindowHeadAvatarSVG = styled(AvatarSVG)`
   width: 4rem;
   height: 4rem;
   fill: var(--cl-secondary);
 `;
 
-export const ChatWindowHeadName = styled.div`
+export const MessageWindowHeadName = styled.div`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -81,8 +38,8 @@ export const ChatWindowHeadName = styled.div`
   color: var(--cl-fontA);
 `;
 
-export const ChatWindowBody = styled.div`
-  ${getProperBodyStyiles}
+export const MessageWindowBody = styled.div`
+  ${getProperBodyStyle}
   padding: 2rem;
 
   overflow-y: scroll;
@@ -109,7 +66,7 @@ export const ChatWindowBody = styled.div`
   }
 `;
 
-export const ChatWindowBot = styled.div`
+export const MessageWindowBot = styled.div`
   display: grid;
   padding: 0rem 2rem;
   align-items: center;

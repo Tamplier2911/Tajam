@@ -1,8 +1,5 @@
 // import "./CreateUserForm.scss";
-import React, { useState, useContext } from "react";
-
-// contexts
-import AppStore from "../../contexts/GlobalContext/globalContext";
+import React, { useState } from "react";
 
 // components
 import FormInput from "../FormInput/FormInput";
@@ -14,22 +11,20 @@ import {
   CreateUserFormElement,
 } from "./CreateUserForm.styles";
 
-const CreateUserForm = () => {
-  const { setChatCurrentUser } = useContext(AppStore);
-
-  const [userObject, setUserObject] = useState({ userName: "" });
-  const { userName } = userObject;
+const CreateUserForm = ({ onCreateChatUser }) => {
+  const [chatObject, setChatObject] = useState({ userName: "", roomName: "" });
+  const { userName, roomName } = chatObject;
 
   const onInputChange = (e) => {
     const { name, value } = e.target;
     // handle errors
-    setUserObject({ ...userObject, [name]: value });
+    setChatObject({ ...chatObject, [name]: value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
     // validate
-    setChatCurrentUser(userName);
+    onCreateChatUser({ name: userName, room: roomName });
   };
 
   return (
@@ -41,11 +36,21 @@ const CreateUserForm = () => {
           name="userName"
           type="text"
           id="usernameforminput"
-          placeholder="Pick a random name"
+          placeholder="Name"
           label="User Name"
           required
         />
-        <Button title="Login to Chat" type="submit" />
+        <FormInput
+          onInputChange={onInputChange}
+          value={roomName}
+          name="roomName"
+          type="text"
+          id="roomnameforminput"
+          placeholder="Room"
+          label="Room name"
+          required
+        />
+        <Button title="Login to Chat" type="submit" color="dark" />
       </CreateUserFormElement>
     </CreateUserFormContainer>
   );

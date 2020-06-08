@@ -65,4 +65,8 @@ export const MenuBlockUL = styled.ul`
 
 export const MenuBlockLI = styled.li`
   text-align: center;
+
+  & div a {
+    font-size: 2rem !important;
+  }
 `;

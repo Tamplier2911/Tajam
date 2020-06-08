@@ -3,20 +3,33 @@ import styled from "styled-components";
 // svg
 import { ReactComponent as AvatarSVG } from "../../assets/svg/avatar.svg";
 
-const getMessageLayout = ({ own }) =>
-  own
-    ? `grid-template-columns: min-content 1fr;`
-    : `grid-template-columns: 1fr min-content;`;
+const getMessageLayout = ({ style }) => {
+  if (style === 1)
+    return `grid-template-columns: 1fr min-content; justify-items: right;`;
+  if (style === 2)
+    return `grid-template-columns: min-content 1fr; justify-items: left;`;
+  return `grid-template-columns: 1fr min-content; justify-items: right;`;
+};
 
-const getMessageSVGColor = ({ own }) =>
-  own ? `fill: var(--cl-secondary);` : `fill: var(--cl-primary);`;
+const getMessageSVGColor = ({ style }) => {
+  if (style === 1) return `fill: var(--cl-primaryGd);`;
+  if (style === 2) return `fill: var(--cl-secondary);`;
+  return `fill: var(--cl-primary);`;
+};
 
-const getMessageOrder = ({ own }) => (own ? `` : `order: 2;`);
+const getMessageOrder = ({ style }) => {
+  if (style === 1) return `order: 2;`;
+  if (style === 2) return ``;
+  return `order: 2;`;
+};
 
-const getMessageBgColor = ({ own }) =>
-  own
-    ? `background-color: var(--cl-secondary);`
-    : `background-color: var(--cl-primary);`;
+const getMessageBgColor = ({ style }) => {
+  if (style === 1)
+    return `background-image: linear-gradient(to top right, var(--cl-primaryGd), var(--cl-bgGd));`;
+  if (style === 2)
+    return `background-image: linear-gradient(to top right, var(--cl-secondary), var(--cl-tertiary));`;
+  return `background-image: linear-gradient(to top right, var(--cl-secondary), var(--cl-primary));`;
+};
 
 export const MessageBubbleContainer = styled.div`
   ${getMessageLayout}
@@ -36,9 +49,22 @@ export const MessageBubbleSVG = styled(AvatarSVG)`
   height: 4rem;
 `;
 
-export const MessageText = styled.div`
+export const MessageTextWrap = styled.div`
   ${getMessageBgColor}
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-template row;
   border-radius: 5rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
   word-break: break-word;
+`;
+
+export const MessageText = styled.div`
+  word-break: break-word;
+  padding: 0rem 3rem;
+`;
+
+export const MessageUser = styled.div`
+  font-size: 1.2rem;
+  padding: 0rem 3rem;
 `;

@@ -8,7 +8,7 @@ const Button = ({ title, action, type, color }) => {
   return (
     <ButtonWrapper
       color={color}
-      onClick={() => (action ? action() : () => {})}
+      onClick={(e) => (action ? action(e) : (e) => {})}
       type={type ? type : "button"}
     >
       {title}

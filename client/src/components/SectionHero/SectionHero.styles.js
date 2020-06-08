@@ -135,7 +135,8 @@ export const SectionHeroText = styled.p`
   ${fadeInText}
   color: var(--cl-fontW);
   font-size: 1.6rem;
-  min-height: 7.5rem;
+  // min-height: 7.5rem;
+  height: 7.5rem;
 `;
 
 export const SectionHeroCta = styled.div``;

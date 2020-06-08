@@ -6,6 +6,9 @@ import HeaderMedium from "../HeaderMedium/HeaderMedium";
 import TeamMemberCard from "../TeamMemberCard/TeamMemberCard";
 import Button from "../Button/Button";
 
+// utils
+import { jumper } from "../../utils/jumper";
+
 // sc
 import {
   SectionTeamContainer,
@@ -40,7 +43,7 @@ const SectionTeam = () => {
         <SectionTeamBot>
           <SectionTeamBotText>{textBot}</SectionTeamBotText>
           <SectionTeamBotCta>
-            <Button title={button} />
+            <Button title={button} action={jumper("#works")} />
           </SectionTeamBotCta>
         </SectionTeamBot>
       </SectionTeamWrap>

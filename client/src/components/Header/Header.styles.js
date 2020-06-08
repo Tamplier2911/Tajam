@@ -6,7 +6,8 @@ import { ReactComponent as MenuSVG } from "../../assets/svg/menu.svg";
 
 const getRespectiveBgColor = ({ scroll }) =>
   scroll
-    ? `background-image: linear-gradient(to right, var(--cl-primary), var(--cl-bg));`
+    ? // ? `background-image: linear-gradient(to right, var(--cl-primary), var(--cl-bg));`
+      `background-color:  var(--cl-bg);`
     : `background-color: transparent;`;
 
 export const HeaderContainer = styled(Headroom)`
@@ -17,9 +18,10 @@ export const HeaderContainer = styled(Headroom)`
   width: 100%;
 
   & > div {
+    ${getRespectiveBgColor}
     display: grid;
     grid-template-columns: 1fr minmax(0rem, 117rem) 1fr;
-    ${getRespectiveBgColor}
+    transition: background-color 0.5s;
   }
 `;
 

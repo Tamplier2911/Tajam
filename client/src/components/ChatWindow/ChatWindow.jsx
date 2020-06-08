@@ -1,12 +1,11 @@
 import "./ChatWindow.scss";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 // context
 import AppStore from "../../contexts/GlobalContext/globalContext";
 
 // components
-import MessageForm from "../MessageForm/MessageForm";
-import MessageBubble from "../MessageBubble/MessageBubble";
+import MessageWindow from "../MessageWindow/MessageWindow";
 import CreateUserForm from "../CreateUserForm/CreateUserForm";
 
 // sc
@@ -22,48 +21,39 @@ import {
   ChatWindowBot,
 } from "./ChatWindow.styles";
 
-// temporary constants
-import { tempChatConstants } from "./ChatWindow.constants";
-
 const ChatWindow = () => {
-  const { message } = tempChatConstants;
-  const { chat, toggleChat } = useContext(AppStore);
-  const { chatHidden, currentUser } = chat;
+  const { toggleChat } = useContext(AppStore);
 
-  return chatHidden ? null : (
-    <ChatWindowContainer onClick={() => toggleChat()}>
+  const [userData, setUserData] = useState({ name: "", room: "" });
+  const { name, room } = userData;
+
+  const onCreateChatUser = (userData) => {
+    setUserData(userData);
+  };
+
+  return (
+    // <ChatWindowContainer onClick={() => toggleChat()}>
+    <ChatWindowContainer>
       <ChatWindowWrap onClick={(e) => e.stopPropagation()}>
         <ChatWindowClose onClick={() => toggleChat()}>&#10539;</ChatWindowClose>
-        {currentUser ? (
-          <React.Fragment>
-            <ChatWindowHead>
-              <ChatWindowHeadAvatar>
-                <ChatWindowHeadAvatarSVG />
-              </ChatWindowHeadAvatar>
-              <ChatWindowHeadName>{currentUser}</ChatWindowHeadName>
-            </ChatWindowHead>
-            <ChatWindowBody>
-              {message.map((messageObj) => {
-                const { id, message, own } = messageObj;
-                return (
-                  <MessageBubble key={id} message={message} own={own ? 1 : 0} />
-                );
-              })}
-            </ChatWindowBody>
-            <ChatWindowBot>
-              <MessageForm wipe={() => console.log("wiped!")} />
-            </ChatWindowBot>
-          </React.Fragment>
+        {name ? (
+          <MessageWindow
+            userName={name}
+            roomName={room}
+            setUserData={setUserData}
+          />
         ) : (
           <React.Fragment>
-            <ChatWindowHead>
+            <ChatWindowHead headers={1}>
               <ChatWindowHeadAvatar>
                 <ChatWindowHeadAvatarSVG />
               </ChatWindowHeadAvatar>
-              <ChatWindowHeadName>Please, choose username:</ChatWindowHeadName>
+              <ChatWindowHeadName>
+                Please, pick a user name and a room:
+              </ChatWindowHeadName>
             </ChatWindowHead>
             <ChatWindowBody log={1}>
-              <CreateUserForm />
+              <CreateUserForm onCreateChatUser={onCreateChatUser} />
             </ChatWindowBody>
             <ChatWindowBot></ChatWindowBot>
           </React.Fragment>

@@ -5,6 +5,9 @@ import React from "react";
 import Button from "../Button/Button";
 import HeaderMedium from "../HeaderMedium/HeaderMedium";
 
+// utils
+import { jumper } from "../../utils/jumper";
+
 // logo image
 import logo from "../../assets/jpg/awsomelogo.png";
 
@@ -38,7 +41,11 @@ const SectionStory = () => {
           <SectionStoryInfoText>{firstText}</SectionStoryInfoText>
           <SectionStoryInfoText>{secondText}</SectionStoryInfoText>
           <SectionStoryInfoCTA>
-            <Button title={button} color="dark" />
+            <Button
+              title={button}
+              action={jumper("#experience")}
+              color="dark"
+            />
           </SectionStoryInfoCTA>
         </SectionStoryInfo>
       </SectionStoryContent>

@@ -5,10 +5,7 @@ const Context = createContext({});
 export const GlobalContext = ({ children }) => {
   const [appState, setAppState] = useState({
     menu: { menuHidden: true },
-    chat: {
-      currentUser: "",
-      chatHidden: true,
-    },
+    chat: { chatHidden: true },
   });
   const { menu, chat } = appState;
 
@@ -20,10 +17,6 @@ export const GlobalContext = ({ children }) => {
     setAppState({ ...appState, chat: { chatHidden: !chat.chatHidden } });
   };
 
-  const setChatCurrentUser = (userName) => {
-    setAppState({ ...appState, chat: { currentUser: userName } });
-  };
-
   return (
     <Context.Provider
       value={{
@@ -31,7 +24,6 @@ export const GlobalContext = ({ children }) => {
         toggleMenu,
         chat,
         toggleChat,
-        setChatCurrentUser,
       }}
     >
       {children}

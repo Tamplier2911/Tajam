@@ -6,16 +6,25 @@ import {
   MessageBubbleContainer,
   MessageBubbleSVGWrap,
   MessageBubbleSVG,
+  MessageTextWrap,
   MessageText,
+  MessageUser,
 } from "./MessageBubble.styles";
 
-const MessageBubble = ({ message, own }) => {
+// utils
+import { dateConverter } from "../../utils/dateConverter";
+
+const MessageBubble = ({ text, style, user, time }) => {
+  const date = dateConverter(time);
   return (
-    <MessageBubbleContainer own={own}>
-      <MessageBubbleSVGWrap own={own}>
-        <MessageBubbleSVG own={own} />
+    <MessageBubbleContainer style={style}>
+      <MessageBubbleSVGWrap style={style}>
+        <MessageBubbleSVG style={style} />
       </MessageBubbleSVGWrap>
-      <MessageText own={own}>{message}</MessageText>
+      <MessageTextWrap style={style}>
+        <MessageText>{text}</MessageText>
+        <MessageUser>{`${user}, ${date}`}</MessageUser>
+      </MessageTextWrap>
     </MessageBubbleContainer>
   );
 };

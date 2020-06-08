@@ -1,5 +1,5 @@
-export const tempChatConstants = {
-  message: [
+export const tempMessageWindowConstants = {
+  messages: [
     {
       id: "msg1",
       message:
