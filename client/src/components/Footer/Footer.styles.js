@@ -31,6 +31,16 @@ const svgSharedStyles = css`
   }
 `;
 
+const titleShareStyles = css`
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+
+  @media only screen and (max-width: 768px) {
+    justify-self: center;
+  }
+`;
+
 export const FooterContainer = styled.footer`
   display: grid;
   grid-template-columns: 1fr minmax(0rem, 117rem) 1fr;
@@ -133,13 +143,7 @@ export const FooterColTwo = styled.div`
 `;
 
 export const FooterColTwoTitle = styled.div`
-  align-self: center;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-
-  @media only screen and (max-width: 768px) {
-    justify-self: center;
-  }
+  ${titleShareStyles}
 `;
 
 export const FooterColTwoPos = styled.div`
@@ -189,7 +193,7 @@ export const FooterColThree = styled.div`
 `;
 
 export const FooterColThreeTitle = styled.div`
-  align-self: center;
+  ${titleShareStyles}
 `;
 
 export const FooterColThreeForm = styled.div``;
